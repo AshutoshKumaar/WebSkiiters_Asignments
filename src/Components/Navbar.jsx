@@ -5,24 +5,28 @@ import { BsFillBagCheckFill } from 'react-icons/bs'
 
 function Navbar() {
     return (
-        <div className='flex flex-row justify-around items-center bg-[#ffffff] py-3 px-5 shadow-sm border-b-[0.5px] border-[#dca827]'>
+        <div className=' w-full fixed top-0 flex flex-row justify-around items-center bg-[#ffffff] py-3 px-5 shadow-sm border-b-[1px] border-[#dca827] z-10'>
             {/* Logo of website */}
             <div>
                 <img src={logo} alt="logo_img" />
             </div>
             <div>
                 {/* NavBar  */}
-                <nav className='flex flex-row  justify-between items-center'>
+                <nav className='flex flex-row justify-between items-center'>
                     {/* Navlist */}
-                    <ul className='flex flex-row justify-around items-center'>
-                        <li className='ml-0 flex items-center drop-shadow-lg'><a href="/home" className='text-[18px] uppercase px-4 text-[#dca827] font-[400]'>Home</a><p className='bg-black w-[1px] h-[15px]'></p></li>
-                        <li className='ml-2 flex items-center'><a href="/product" className='text-[18px] uppercase px-3 text-slate-600 font-[400] hover:text-[#dca827] ease-in-out duration-150'>Product</a><p className='bg-black w-[1px] h-[15px]'></p></li>
-                        <li className='ml-2 flex items-center'><a href="/seller" className='text-[18px] uppercase px-3 text-slate-600 font-[400] hover:text-[#dca827] ease-in-out duration-150'>Become a member</a><p className='bg-black w-[1px] h-[15px]'></p></li>
-                        <li className='flex flex-row justify-between items-center ml-2'><a href="/login" className='text-[15px] text-slate-600 font-[500] uppercase px-2 hover:text-[#dca827] ease-in-out duration-150'>Login</a><AiOutlineUser className='text-[25px] font-bold' /></li>
+                    <ul className='flex flex-row justify-start items-center'>
+                        <li className='mr-6'><a href="/home" style={{ fontFamily: 'Josefin Sans', textShadow: '1px 1px #ccc' }} className='uppercase font-[800] text-slate-800 text-sm hover:text-[#dca827] visited:text-[#e2b33d]'>Home</a><span className='ml-6 text-sm font-[200]'>|</span></li>
+                        <li className='ml-2 mr-6'><a href="/product" style={{ fontFamily: 'Josefin Sans', textShadow: '1px 1px #ccc' }} className='uppercase font-[800] text-slate-800  text-sm hover:text-[#dca827]  ease-in-out duration-300'>Products</a><span className='ml-4 font-[200]'>|</span></li>
+                        <li className='ml-2 mr-6'><a href="/member" style={{ fontFamily: 'Josefin Sans', textShadow: '1px 1px #ccc' }} className='uppercase font-[800] text-slate-800  text-sm hover:text-[#dca827]  ease-in-out duration-300'>Become a members</a><span className='ml-4 font-[200]'>|</span></li>
+                        <li className='ml-2 mr-6'><a href="/login" style={{ fontFamily: 'Josefin Sans' }} className='uppercase text-slate-800 font-[600] hover:text-[#dca827]  text-sm  ease-in-out duration-300'>Login</a> <span><AiOutlineUser className='inline text-[20px] font-[900]' /></span></li>
+
                     </ul>
+
                     {/* Another Box */}
-                    <div className='bg-[#dca827] w-[100px] p-2 mx-2 rounded-md'>
-                        <BsFillBagCheckFill className='text-[25px] font-bold float-right' />
+                    <div className='bg-[#dca827] w-[140px] px-2 py-[4px]'>
+                        <div className='bg-[#2c2c2c] w-[35px] h-[40px]  float-right rounded-sm'>
+                            <BsFillBagCheckFill className='text-[20px] font-bold mx-auto mt-[9px] text-[#dca827]' />
+                        </div>
                     </div>
                 </nav>
             </div>
